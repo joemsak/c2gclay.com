@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Under Construction" src="./assets/construction.gif">
-    <p>C2G Clay is coming soon...</p>
+    <img alt="c2g logo" src="./assets/logo.png">
   </div>
 </template>
 
