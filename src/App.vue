@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container-fluid mt-3 mx-auto">
     <img alt="c2g logo" src="./assets/logo.png">
   </div>
 </template>
@@ -10,13 +10,6 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss">
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+</style>``
