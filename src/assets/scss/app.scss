@@ -28,7 +28,7 @@ body {
 .footer {
   flex-shrink: 0;
   text-align: center;
-  color: white;
+  color: #eee;
 
   a {
     font-size: 1.6rem;
@@ -37,10 +37,11 @@ body {
     font-weight: bold;
     margin: 0 1rem;
     padding: 0.5rem;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
 
     &:hover {
-      color: #ddd;
+      color: #fff;
+      transform: scale(1.2);
     }
   }
 }
