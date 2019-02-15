@@ -4,11 +4,12 @@
       <div id="logo" class="mt-5"></div>
     </div>
 
-    <div id="cover"></div>
-
-    <div class="gallery-img">
-      <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8208.jpg" />
-    </div>
+    <img width="100%" src="./assets/bg.jpg" />
+    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8208.jpg" />
+    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8282.jpg" />
+    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8271.jpg" />
+    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8196.jpg" />
+    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8297.jpg" />
   </div>
 </template>
 
