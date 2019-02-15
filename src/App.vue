@@ -4,7 +4,6 @@
       <div id="logo" class="mt-5"></div>
     </div>
 
-
     <div id="cover"></div>
 
     <div class="gallery-img">
