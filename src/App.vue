@@ -9,10 +9,26 @@
     </div>
 
     <img id="first" width="100%" src="./assets/galleries/vajilla-ricky/DSCF8208.jpg" />
-    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8282.jpg" />
-    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8271.jpg" />
-    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8196.jpg" />
-    <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8297.jpg" />
+
+    <img
+      width="100%"
+      srcset="./assets/galleries/vajilla-ricky/DSCF8282-600px.jpg 600w"
+      src="./assets/galleries/vajilla-ricky/DSCF8282.jpg" />
+
+    <img
+      width="100%"
+      srcset="./assets/galleries/vajilla-ricky/DSCF8271-600px.jpg 600w"
+      src="./assets/galleries/vajilla-ricky/DSCF8271.jpg" />
+
+    <img
+      width="100%"
+      srcset="./assets/galleries/vajilla-ricky/DSCF8196-600px.jpg 600w"
+      src="./assets/galleries/vajilla-ricky/DSCF8196.jpg" />
+
+    <img
+      width="100%"
+      srcset="./assets/galleries/vajilla-ricky/DSCF8297-600px.jpg 600w"
+      src="./assets/galleries/vajilla-ricky/DSCF8297.jpg" />
   </div>
 </template>
 
