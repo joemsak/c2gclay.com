@@ -5,30 +5,19 @@
     </div>
 
     <div id="cover" class="d-flex justify-content-center">
-      <i @click="scrollToFirst" class="fas fa-chevron-down"></i>
+      <i @click="scrollToGallery" class="fas fa-chevron-down"></i>
     </div>
 
-    <img id="first" width="100%" src="./assets/galleries/vajilla-ricky/DSCF8208.jpg" />
-
-    <img
-      width="100%"
-      srcset="./assets/galleries/vajilla-ricky/DSCF8282-600px.jpg 600w"
-      src="./assets/galleries/vajilla-ricky/DSCF8282.jpg" />
-
-    <img
-      width="100%"
-      srcset="./assets/galleries/vajilla-ricky/DSCF8271-600px.jpg 600w"
-      src="./assets/galleries/vajilla-ricky/DSCF8271.jpg" />
-
-    <img
-      width="100%"
-      srcset="./assets/galleries/vajilla-ricky/DSCF8196-600px.jpg 600w"
-      src="./assets/galleries/vajilla-ricky/DSCF8196.jpg" />
-
-    <img
-      width="100%"
-      srcset="./assets/galleries/vajilla-ricky/DSCF8297-600px.jpg 600w"
-      src="./assets/galleries/vajilla-ricky/DSCF8297.jpg" />
+    <div id="gallery">
+      <img
+        v-for="fileName in galleryFileNames"
+        :key="fileName"
+        width="100%"
+        :srcset="getSrcSet(fileName)"
+        sizes="100vw"
+        :src="getImgUrl(fileName)"
+      />
+    </div>
   </div>
 </template>
 
@@ -38,9 +27,39 @@ import $ from 'jquery'
 export default {
   name: 'app',
 
+  data () {
+    return {
+      galleryFileNames: [
+        'DSCF8208',
+        'DSCF8282',
+        'DSCF8271',
+        'DSCF8196',
+        'DSCF8297',
+      ],
+    }
+  },
+
   methods: {
-    scrollToFirst () {
-      const target = $("#first")
+    getSrcSet (fileName) {
+      return `
+        ${this.getImgUrl(fileName, 640, 2)} 640w,
+        ${this.getImgUrl(fileName, 1125, 3)} 1125w,
+        ${this.getImgUrl(fileName)} 2000w
+      `
+    },
+
+    getImgUrl (fileName, size, dpr) {
+      const images = require.context('./assets/galleries/vajilla-ricky/', false, /\.jpg$/)
+
+      if (size) {
+        return images(`./${fileName}-${size}@${dpr}x.jpg`)
+      } else {
+        return images(`./${fileName}.jpg`)
+      }
+    },
+
+    scrollToGallery () {
+      const target = $("#gallery")
 
       $('html, body').animate({
         scrollTop: target.offset().top
@@ -77,7 +96,7 @@ export default {
         logo.classList.remove("ml-3", "mt-3")
       }
     }
-  }
+  },
 }
 </script>
 
