@@ -4,7 +4,7 @@
       <div id="logo" class="mt-5"></div>
     </div>
 
-    <img id="cover" width="100%" src="./assets/bg.jpg" />
+    <div id="cover"></div>
     <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8208.jpg" />
     <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8282.jpg" />
     <img width="100%" src="./assets/galleries/vajilla-ricky/DSCF8271.jpg" />
@@ -22,7 +22,7 @@ export default {
 
     function scrollFunction() {
       const logo = document.querySelector("#logo")
-      const coverHeight = document.querySelector("#cover").height * 0.75
+      const coverHeight = document.querySelector("#cover").offsetHeight * 0.55
 
       if (document.body.scrollTop > coverHeight || document.documentElement.scrollTop > coverHeight) {
         logo.style.width = "50px"

@@ -34,6 +34,13 @@ body {
   transition: width 0.2s, padding 0.5s ease-in-out;
 }
 
+#cover {
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
 .footer {
   flex-shrink: 0;
   text-align: center;
