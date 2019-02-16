@@ -5,7 +5,7 @@
     </div>
 
     <div id="cover" class="d-flex justify-content-center">
-      <a href="#first"><i class="fas fa-chevron-down"></i></a>
+      <i @click="scrollToFirst" class="fas fa-chevron-down"></i>
     </div>
 
     <img id="first" width="100%" src="./assets/galleries/vajilla-ricky/DSCF8208.jpg" />
@@ -19,6 +19,14 @@
 <script>
 export default {
   name: 'app',
+
+  methods: {
+    scrollToFirst () {
+      document.querySelector("#first").scrollIntoView({
+        behavior: 'smooth'
+      });
+    },
+  },
 
   created() {
     window.onscroll = function() { scrollFunction() }
