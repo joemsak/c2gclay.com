@@ -17,14 +17,28 @@
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'app',
 
   methods: {
     scrollToFirst () {
-      document.querySelector("#first").scrollIntoView({
-        behavior: 'smooth'
-      });
+      const target = $("#first")
+
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 500, function() {
+        var $target = $(target)
+        $target.focus()
+
+        if ($target.is(":focus")) {
+          return false
+        } else {
+          $target.attr('tabindex','-1')
+          $target.focus()
+        }
+      })
     },
   },
 
