@@ -1,4 +1,4 @@
-# c2gclay.com
+# claytoglaze.com
 
 ## Project setup
 ```
