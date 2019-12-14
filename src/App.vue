@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container-fluid">
     <div id="logo-wrapper">
-      <div id="logo" class="mt-5"></div>
+      <div id="logo"></div>
     </div>
 
     <div id="cover" class="d-flex justify-content-center">
@@ -81,19 +81,23 @@ export default {
     window.onscroll = function() { scrollFunction() }
 
     function scrollFunction() {
-      const logo = document.querySelector("#logo")
+      const logoWrapper = document.querySelector("#logo-wrapper")
+      const logo = logoWrapper.querySelector("#logo")
       const coverHeight = document.querySelector("#cover").offsetHeight * 0.55
 
-      if (document.body.scrollTop > coverHeight || document.documentElement.scrollTop > coverHeight) {
-        logo.style.width = "50px"
-        logo.style.height = "50px"
-        logo.classList.remove("mt-5")
-        logo.classList.add("ml-3", "mt-3")
+      if (
+            document.body.scrollTop > coverHeight ||
+              document.documentElement.scrollTop > coverHeight
+         ) {
+        logo.style.width = "200px"
+        logo.style.height = "49px"
+        logo.classList.add("ml-3")
+        logoWrapper.classList.add("scrolled")
       } else {
-        logo.style.width = "250px"
-        logo.style.height = "250px"
-        logo.classList.add("mt-5")
-        logo.classList.remove("ml-3", "mt-3")
+        logo.style.width = "850px"
+        logo.style.height = "207px"
+        logo.classList.remove("ml-3")
+        logoWrapper.classList.remove("scrolled")
       }
     }
   },
