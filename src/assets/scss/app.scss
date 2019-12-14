@@ -33,8 +33,6 @@ body {
 }
 
 #logo {
-  width: 850px;
-  height: 207px;
   margin: 0 auto;
   background: url('./assets/logo-white-drop-shadow.png') no-repeat center;
   background-size: contain;
@@ -124,5 +122,26 @@ img {
       opacity: 1;
       transform: scale(1.2);
     }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #logo {
+    width: 850px;
+    height: 207px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #logo {
+    width: 550px;
+    height: 134px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #logo {
+    width: 350px;
+    height: 85px;
   }
 }

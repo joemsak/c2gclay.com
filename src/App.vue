@@ -85,6 +85,20 @@ export default {
       const logo = logoWrapper.querySelector("#logo")
       const coverHeight = document.querySelector("#cover").offsetHeight * 0.55
 
+      let fullSizeWidth
+      let fullSizeHeight
+
+      if (window.innerWidth > 900) {
+        fullSizeWidth = 850
+        fullSizeHeight = 207
+      } else if (window.innerWidth > 600) {
+        fullSizeWidth = 550
+        fullSizeHeight = 134
+      } else {
+        fullSizeWidth = 350
+        fullSizeHeight = 85
+      }
+
       if (
             document.body.scrollTop > coverHeight ||
               document.documentElement.scrollTop > coverHeight
@@ -94,8 +108,8 @@ export default {
         logo.classList.add("ml-3")
         logoWrapper.classList.add("scrolled")
       } else {
-        logo.style.width = "850px"
-        logo.style.height = "207px"
+        logo.style.width = `${fullSizeWidth}px`
+        logo.style.height = `${fullSizeHeight}px`
         logo.classList.remove("ml-3")
         logoWrapper.classList.remove("scrolled")
       }
